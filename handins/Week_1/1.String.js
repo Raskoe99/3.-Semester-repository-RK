@@ -32,7 +32,6 @@ const three = 98;
 // Show in the console the avg. with 5 decimals
 
 const avrgSum = (one + two + three) / 3
-
 console.log(avrgSum.toFixed(5))
 
 // --------------------------------------
@@ -42,7 +41,6 @@ const letters = "abc";
 // Get me the character "c"
 
 console.log(letters.charAt(2))
-
 
 // --------------------------------------
 // Exercise 5 - Replace
