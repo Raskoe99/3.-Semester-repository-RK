@@ -36,7 +36,7 @@ const significantMathNumbers = [0, 2.718, 3.14159, 1729];
 function findNumber(arr) {
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] == 1729) {
-            console.log(arr[i])
+            console.log("Index " + i + " is " + arr[i])
         }
     }
 }
