@@ -1,0 +1,10 @@
+Maven           npm
+Java            Gradle
+Python          PIP
+POM.xml         package.json
+
+meta-data       meta-data
+dependencies    dependencies
+
+
+A valid json file requires curly brackets, since they are objects: {}

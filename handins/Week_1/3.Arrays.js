@@ -19,9 +19,7 @@ const friendOne = {friendOne : "kind"}
 const friendTwo = {friendTwo : "loyal"}
 const friendThree = {friendThree : "funny"}
 
-friends[0] = friendOne
-friends[1] = friendTwo
-friends[2] = friendThree
+friends.push(friendOne, friendTwo, friendThree)
 
 console.log(friends)
 
@@ -67,7 +65,14 @@ console.log(diet)
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
-const dinnerTray = diet
+//This can be dangerous, because if I dinnerTray.pop, diet also loses its last value
+//const dinnerTray = diet
+//console.log(dinnerTray)
+
+//const dinnerTray = diet.slice()
+//or
+const dinnerTray = [...diet]
+
 console.log(dinnerTray)
 
 // --------------------------------------
@@ -77,20 +82,9 @@ const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
-function everySecond(arr) {
-    const letters = []
-    let j = 0
-    for(let i = 0; i < arr.length; i++) {
-        let letterPlacement = i % 2
-
-        if(letterPlacement !== 0) {
-            letters[j] = arr[i]
-            j++
-        }
-    }
-    console.log(letters)
+for (let i = 1; i < numbers.length; i+=2) {
+    console.log(numbers[i])
 }
-everySecond(lettersExpanded)
 
 // --------------------------------------
 // Exercise 8 - For loop and if statement
