@@ -15,11 +15,11 @@ app.get("/beers", (req, res) => {
 
 app.get("/beers/:id", (req, res) => {
     seekId = parseInt(req.params.id)
-    array.forEach(beer => {
+    beers.forEach(beer => {
         if (beer.beerId === seekId) {
             res.send(beer)
         } else {
-            console.log("Beer does not exist/ID not found")
+            res.send("Beer does not exist/ID not found")
         }
     });
 })
@@ -35,7 +35,7 @@ app.delete("/beers/:id", (req, res) => {
         if (beer.beerId === seekId) {
             beers.splice(beers.indexOf(beer), 1)
         } else {
-            console.log("Beer does not exist/ID not found")
+            res.send("Beer does not exist/ID not found")
         }
     });
     res.send(beers)
@@ -47,7 +47,7 @@ app.put("/beers/:id", (req, res) => {
         if (beer.beerId === seekId) {
             beers[seekId-1] = req.body
         } else {
-            console.log("Beer does not exist/ID not found")
+            res.send("Beer does not exist/ID not found")
         }
     });
     res.send(beers)
@@ -59,7 +59,7 @@ app.patch("/beers/:id", (req, res) => {
         if (beer.beerId === seekId) {
             beers[seekId-1] = req.body
         } else {
-            console.log("Beer does not exist/ID not found")
+            res.send("Beer does not exist/ID not found")
         }
     });
     res.send(beers)
