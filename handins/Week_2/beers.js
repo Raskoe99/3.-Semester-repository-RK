@@ -24,12 +24,12 @@ app.get("/beers/:id", (req, res) => {
     });
 })
 
-app.post("/createBeer", (req, res) => {
+app.post("/beers", (req, res) => {
     beers.push(req.body)
     res.send(beers)
 })
 
-app.delete("/deleteBeer/:id", (req, res) => {
+app.delete("/beers/:id", (req, res) => {
     seekId = parseInt(req.params.id)
     beers.forEach(beer => {
         if (beer.beerId === seekId) {
@@ -41,7 +41,7 @@ app.delete("/deleteBeer/:id", (req, res) => {
     res.send(beers)
 })
 
-app.put("/updateBeer/:id", (req, res) => {
+app.put("/beers/:id", (req, res) => {
     seekId = parseInt(req.params.id)
     beers.forEach(beer => {
         if (beer.beerId === seekId) {
@@ -53,7 +53,7 @@ app.put("/updateBeer/:id", (req, res) => {
     res.send(beers)
 })
 
-app.patch("/patchBeer/:id", (req, res) => {
+app.patch("/beers/:id", (req, res) => {
     seekId = parseInt(req.params.id)
     beers.forEach(beer => {
         if (beer.beerId === seekId) {
