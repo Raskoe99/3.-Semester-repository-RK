@@ -13,4 +13,3 @@ const port = 8080
 app.listen(port, (error) => {
     console.log("Successfully connected to port", port)
 })
-console
