@@ -1,0 +1,10 @@
+{
+    "type": "module",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "express": "4.17.2",
+        "express-rate-limit": "^6.3.0",
+        "express-session": "^1.17.2",
+        "helmet": "^5.0.2"
+    }
+}
